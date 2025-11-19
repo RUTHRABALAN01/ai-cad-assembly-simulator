@@ -1,0 +1,26 @@
+Title,Description,Labels,Status,Phase
+[docs] Literature review on AI-driven CAD assembly & ML-FEA models,Review related academic papers and datasets.,docs,To Do,Phase 1
+[setup] Install and configure Fusion 360 API + scripting environment,Set up development environment for Fusion 360 plugin development.,setup,To Do,Phase 1
+"[repo] Initialize GitHub repo with README, .gitignore, license",Create project repository and basic documentation.,repo,To Do,Phase 1
+[data] Sketch data format for geometry + FEA results,Design data schema for 3D features and simulation results.,data,To Do,Phase 1
+[data] List CAD repositories and FEA tools for dataset generation,Research CAD file sources and simulation libraries.,data,To Do,Phase 1
+[plugin] Build basic Fusion 360 UI panel (buttons only),Add core UI elements to the plugin toolbar.,plugin,To Do,Phase 1
+[plugin] Write script to parse .STEP/.IGES files into face/edge data,Parse geometry from input files and extract key features.,plugin,To Do,Phase 1
+[plugin] Display geometry features in Fusion console/log,Log face/edge info for debugging and inspection.,plugin,To Do,Phase 1
+[data] Manually collect 3–5 sample assemblies for constraint study,Gather a few assemblies with labeled joints for training or testing.,data,To Do,Phase 1
+[data] Annotate 20 assemblies with joints (rigid/revolute),Label parts with correct joints for training joint classifier.,data,To Do,Phase 2
+"[ml] Extract features: hole size, face area, orientation",Compute part features for training ML model.,ml,To Do,Phase 2
+[ml] Train lightweight classifier (SVM/MLP) to predict joint type,Train and test a basic joint-type predictor.,ml,To Do,Phase 2
+[ml] Evaluate accuracy of joint predictor on test cases,Compute metrics and confusion matrix.,ml,To Do,Phase 2
+[plugin] Implement joint placement logic in Fusion 360 API,Use joint predictions to constrain parts in the plugin.,plugin,To Do,Phase 2
+[plugin] Test rule-based hole-to-peg alignment,Basic heuristic matching for joint inference.,plugin,To Do,Phase 2
+[plugin] Visualize predicted joints in Fusion canvas,Show markers or debug visuals for joint connections.,plugin,To Do,Phase 2
+[plugin] Show error if joint placement fails,Add fail-safe and fallback messaging.,plugin,To Do,Phase 2
+[data] Generate 100+ synthetic 3D parts with parametric scripts,Script part generation with variation in geometry.,data,To Do,Phase 3
+[data] Simulate stress for each part using CalculiX/FEniCS,Use FEA tools to label each part with stress output.,data,To Do,Phase 3
+[ml] Voxelize 3D shapes for CNN input (e.g. 32³ grid),Convert geometry to ML-ready voxel format.,ml,To Do,Phase 3
+[ml] Normalize and label each part as LOW/MEDIUM/HIGH stress,Simplify output label for stress class.,ml,To Do,Phase 3
+[ml] Design and train a 3D CNN model (PyTorch),Build and train the stress prediction model.,ml,To Do,Phase 3
+[ml] Evaluate stress prediction accuracy on test set,Use held-out data to validate model.,ml,To Do,Phase 3
+[ml] Optimize model for inference on RTX 3050 GPU,Reduce memory load and speed up prediction.,ml,To Do,Phase 3
+[plugin] Integrate model into plugin (export→predict→visualize),Connect ML model inference with Fusion 360 plugin UI.,plugin,To Do,Phase 3
